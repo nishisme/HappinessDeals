@@ -19,7 +19,7 @@
     margin-bottom: 30px;
   }  
   .container-fluid {
-    padding: 60px 50px;
+    /*padding: 60px 50px;*/
   }
   .thumbnail {
     padding: 0 0 15px 0;
@@ -31,8 +31,12 @@
     height: 50px;
     padding: 5px;
   }
-  
+  .row {
+    background: white;
+
+  }
   .navbar {
+    padding-left: 200px;
     margin-bottom: 0;
     z-index: 9999;
     border: 0;
@@ -42,14 +46,14 @@
     border-radius: 0;
     font-family: Montserrat, sans-serif;
   }
-  .bg-orange {
-    background-color: #f4511e !important;
+  .pad {
+    padding-left: 170px;
   }
     .bg-black {
     background-color: #C0C0C0 !important;
   }
   .navbar li a, .navbar .navbar-brand {
-    color: #fff !important;
+    /*color: #fff !important;*/
   }
   .navbar-nav li a:hover, .navbar-nav li.active a {
     color: #f4511e !important;
@@ -89,7 +93,28 @@
   overflow-x: hidden;
   padding-top: 60px;
 }
+.sidenav button {
+  background-color: #111;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 20px;
+  width: 200px;
+  position: center;
+}
+.sidenav button:hover {
+  background-color: #ddd;
+}
 
+/* Create an active/current tablink class */
+.sidenav button.active {
+  background-color: #ccc;
+}
 .sidenav a {
   padding: 6px 6px 6px 32px;
   text-decoration: none;
@@ -101,7 +126,44 @@
 .sidenav a:hover {
   color: #f1f1f1;
 }
-.mainBody {
+.dashboard {
+  padding-top: 10px;
   padding-left: 200px;
+}
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  /*border: 1px solid #ccc;*/
+/*  background-color: #f1f1f1;*/
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+/*  border: 1px solid #ccc;*/
+  border-top: none;
 }
   </style>

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Theme Made By www.w3schools.com -->
   <title>Bootstrap Theme Company Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,48 +14,91 @@
   
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+	<div class="container-fluid">
+			<div class="row sidenav">
+			  <a href="#myPage">Stickman Logo</a>
+			  <button class="navlinks" onclick="openMainTab(event, 'Dashboard')" id="defaultOpen">Dashboard</button>
+			  <button class="navlinks" onclick="openMainTab(event, 'Customers')">Customers</button>
+			  <button class="navlinks" onclick="openMainTab(event, 'Offers')">Offers</button>
+			  <button class="navlinks" onclick="openMainTab(event, 'Profile')">Profile</button>
+			  <button class="navlinks" onclick="openMainTab(event, 'Gallery')">Gallery</button>
+			  <button class="navlinks" onclick="openMainTab(event, 'Reviews')">Reviews</button>
+			</div>
+			<div class="pad">
+				<nav class="navbar navbar-default navbar-top ">
+				    <div class="navbar-header">
+				      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>                        
+				      </button>
+				      <a class="navbar-brand" href="#myPage">Stickman Logo</a>
+				    </div>
+				    <div class="collapse navbar-collapse" id="myNavbar">
+				      <ul class="nav navbar-nav navbar-right">
+				      	<li><img src ="userImage.png" class="userImage"></li>
+				        <li><a href="#userInfo">UserName</a></li>
+				      </ul>
+				    </div>
+				</nav>
+			</div>
+					<div id="Dashboard" class="dashboard navcontent tab">
+						<div class="tab">
+						  <button class="tablinks" onclick="openStatus(event, 'Pending')" id="defaultStatusOpen">Pending</button>
+						  <button class="tablinks" onclick="openStatus(event, 'Approved')">Approved</button>
+						  <button class="tablinks" onclick="openStatus(event, 'Rejected')">Rejected</button>
+						  <button class="tablinks" onclick="openStatus(event, 'All')">All</button>
+						</div>
+						<div id="Pending" class="tabcontent">
+						  <h3>Pending Requests</h3>
+						  <p>London is the capital city of England.</p>
+						</div>
 
-<nav class="navbar navbar-default navbar-fixed-top bg-orange">
-  <div class="container">
-    <div class="navbar-header">
-      <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button> -->
-      <a class="navbar-brand" href="#myPage">Stickman Logo</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-      	<li><img src ="userImage.png" class="userImage"></li>
-        <li><a href="#userInfo">UserName</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<div class="container-fluid">
-	<div class="row">
-		<div class="col sidenav">
-		  <a href="#">Customer</a>
-		  <a href="#">Offers</a>
-		  <a href="#">Profile</a>
-		  <a href="#">Gallery</a>
-		  <a href="#">Reviews</a>
-		</div>
-		<div class="mainBody">
-			<nav class="navbar navbar-default bg-black">
-			  <div class="container">
-			      <ul class="nav navbar-nav navbar-left">
-			        <li><a href="#userInfo">Pending</a></li>
-			        <li><a href="#userInfo">Used</a></li>
-			        <li><a href="#userInfo">All</a></li>
-			      </ul>
-			  </div>
-			</nav>
-		</div>
+						<div id="Approved" class="tabcontent">
+						  <h3>Approved Requests</h3>
+						  <p>Paris is the capital of France.</p>
+						</div>
+
+						<div id="Rejected" class="tabcontent">
+						  <h3>Rejected Requests</h3>
+						  <p>Tokyo is the capital of Japan.</p>
+						</div>
+						<div id="All" class="tabcontent">
+						  <h3>All Requests</h3>
+						  <p>Tokyo is the capital of Japan.</p>
+						</div>
+					</div>
 	</div>
-</div>
-
+	<script>
+		document.getElementById("defaultOpen").click();
+		document.getElementById("defaultStatusOpen").click();
+		function openStatus(evt, cityName) {
+		  var i, tabcontent, tablinks;
+		  tabcontent = document.getElementsByClassName("tabcontent");
+		  for (i = 0; i < tabcontent.length; i++) {
+		    tabcontent[i].style.display = "none";
+		  }
+		  tablinks = document.getElementsByClassName("tablinks");
+		  for (i = 0; i < tablinks.length; i++) {
+		    tablinks[i].className = tablinks[i].className.replace(" active", "");
+		  }
+		  document.getElementById(cityName).style.display = "block";
+		  evt.currentTarget.className += " active";
+		}
+		function openMainTab(evt, cityName) {
+		  var i, navcontent, navlinks;
+		  navcontent = document.getElementsByClassName("navcontent");
+		  for (i = 0; i < navcontent.length; i++) {
+		    navcontent[i].style.display = "none";
+		  }
+		  navlinks = document.getElementsByClassName("navlinks");
+		  for (i = 0; i < navlinks.length; i++) {
+		    navlinks[i].className = navlinks[i].className.replace(" active", "");
+		  }
+		  document.getElementById(cityName).style.display = "block";
+		  evt.currentTarget.className += " active";
+		}
+	</script>
 </body>
 </body>
 </html>
