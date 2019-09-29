@@ -36,24 +36,22 @@
 
   }
   .navbar {
-    padding-left: 200px;
-    margin-bottom: 0;
-    z-index: 9999;
+    background-color: white;
+    padding-left: 30px;
+    /*margin-bottom: 0;
+    z-index: 9999;*/
     border: 0;
-    font-size: 12px !important;
-    line-height: 1.42857143 !important;
-    letter-spacing: 4px;
+    font-size: 20px !important;
+    line-height: 2 !important;
+    letter-spacing: 2px;
     border-radius: 0;
     font-family: Montserrat, sans-serif;
   }
   .pad {
-    padding-left: 170px;
+    padding-left: 120px;
   }
     .bg-black {
     background-color: #C0C0C0 !important;
-  }
-  .navbar li a, .navbar .navbar-brand {
-    /*color: #fff !important;*/
   }
   .navbar-nav li a:hover, .navbar-nav li.active a {
     color: #f4511e !important;
@@ -66,7 +64,7 @@
 
   /* Style the header */
 .header {
-  padding: 10px 16px;
+  /*padding: 10px 16px;*/
   background: #C0C0C0;
   color: #f1f1f1;
 }
@@ -84,19 +82,32 @@
 }
 .sidenav {
   height: 100%;
-  width: 200px;
+  width: 150px;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color:#424242;
   overflow-x: hidden;
-  padding-top: 60px;
+  /*padding-top: 20px;*/
+ /* box-shadow: 5px 0px #888888;*/
+}
+#shadow {
+  /*border: 1px solid;*/
+  padding: 10px;
+  box-shadow: 4px 0px 10px #888888;
+}
+.sidenav img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
 }
 .sidenav button {
-  background-color: #111;
+  background-color: #424242;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 14px;
+  font: Roboto,sans-serif;
   color: white;
   display: block;
   border: none;
@@ -104,7 +115,7 @@
   cursor: pointer;
   transition: 0.3s;
   padding: 20px;
-  width: 200px;
+  width: 150px;
   position: center;
 }
 .sidenav button:hover {
@@ -127,8 +138,8 @@
   color: #f1f1f1;
 }
 .dashboard {
-  padding-top: 10px;
-  padding-left: 200px;
+  padding-top: 5px;
+  padding-left: 170px;
 }
 /* Style the tab */
 .tab {
@@ -139,24 +150,28 @@
 
 /* Style the buttons inside the tab */
 .tab button {
-  background-color: inherit;
+  width: 200px;
+  background-color: white;
   float: left;
   border: none;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+  background-color: #ccc;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #ccc;
+  
+  /*background-color: #ccc;*/
+  border-bottom: 2px solid;
+  border-color: dodgerblue;
 }
 
 /* Style the tab content */
@@ -165,5 +180,16 @@
   padding: 6px 12px;
 /*  border: 1px solid #ccc;*/
   border-top: none;
+}
+.footer {
+   position: fixed;
+   left: 130px;
+   bottom: 0;
+   width: 100%;
+   padding-left: 20px;
+   background-color: white;
+   color: black;
+   font-size: 20px;
+   /*ext-align: center;*/
 }
   </style>
